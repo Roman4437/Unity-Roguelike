@@ -5,7 +5,7 @@ public class FireballSkill : BasicProjectileCast
 {
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _isPlayerAbleCasting)
+        if (Input.GetMouseButtonDown(0))
         {
             ActivateSkill();
         }

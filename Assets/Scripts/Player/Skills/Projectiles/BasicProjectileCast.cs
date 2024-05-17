@@ -8,11 +8,11 @@ public class BasicProjectileCast : MonoBehaviour
     [SerializeField] private Transform _castPoint;
     [SerializeField] private int _projectileCount;
     [SerializeField, Min(0.15f)] private float _castSpeed;
-    [SerializeField] private float _skillCooldown;
+    [SerializeField, Min(0.15f)] private float _skillCooldown;
 
     private bool _isSkillReady = true;
-    private float _projectileSpreadAngle = 18f;
-    protected bool _isPlayerAbleCasting = true;
+    private bool _isAbleCasting = true;
+    private const float _projectileSpreadAngle = 18f;
 
     public static event Action<float> OnCast;
 
@@ -51,7 +51,7 @@ public class BasicProjectileCast : MonoBehaviour
 
     public void ActivateSkill()
     {
-        if (_isSkillReady)
+        if (_isSkillReady && _isAbleCasting)
         {
             OnCast.Invoke(_castSpeed);
             LaunchProjectiles();
@@ -77,15 +77,15 @@ public class BasicProjectileCast : MonoBehaviour
             transform.localScale = new Vector2(1f, 1f);
         }
     }
-    
-    private void DisableCasting()
-    {
-        _isPlayerAbleCasting = false;
-        GameState.OnGameStateChange -= UpdateCasting;
-    }
 
     private void UpdateCasting()
     {
-        _isPlayerAbleCasting = !_isPlayerAbleCasting;
+        _isAbleCasting = !_isAbleCasting;
+    }
+
+    private void DisableCasting()
+    {
+        _isAbleCasting = false;
+        GameState.OnGameStateChange -= UpdateCasting;
     }
 }
