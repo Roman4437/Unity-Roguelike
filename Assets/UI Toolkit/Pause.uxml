@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UIStyles.uss?fileID=7433441132597879392&amp;guid=8d5fc820cf6dbbf4db0aa03ef979581e&amp;type=3#UIStyles" />
+    <ui:VisualElement name="VisualElement" style="align-items: center; top: 33%;">
+        <ui:Button text="Main menu" display-tooltip-when-elided="true" name="MainMenu" class="button" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+        <ui:Button text="Exit Game" display-tooltip-when-elided="true" name="ExitGame" class="button" />
+        <ui:Button text="Resume" display-tooltip-when-elided="true" name="Resume" class="button" />
+    </ui:VisualElement>
+</ui:UXML>
