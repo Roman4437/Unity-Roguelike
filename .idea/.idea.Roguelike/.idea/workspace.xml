@@ -4,9 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75207102-d697-44ea-a650-1189183f3cc6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-    </list>
+    <list default="true" id="75207102-d697-44ea-a650-1189183f3cc6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +129,7 @@
       <workItem from="1715867106849" duration="5643000" />
       <workItem from="1715894474086" duration="7000" />
       <workItem from="1715944017917" duration="1498000" />
+      <workItem from="1715945553277" duration="312000" />
     </task>
     <servers />
   </component>
