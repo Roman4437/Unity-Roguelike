@@ -11,11 +11,6 @@ public class Pause : MonoBehaviour
 
    public static event Action OnResumeButtonClick;
 
-   private void Start()
-   {
-      gameObject.SetActive(false);
-   }
-
    private void OnEnable()
    {
       _resume = GetComponent<UIDocument>().rootVisualElement.Q<Button>("Resume");
@@ -37,7 +32,6 @@ public class Pause : MonoBehaviour
    private void ResumeGame()
    {
       OnResumeButtonClick.Invoke();
-      gameObject.SetActive(false);
    }
 
    private void Quit()

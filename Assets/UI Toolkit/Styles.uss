@@ -1,0 +1,113 @@
+* {
+    -unity-font: url('project://database/Assets/TextMesh%20Pro/Examples%20&%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&guid=8a2b9e2a607dd2143b58c44bc32410b4&type=3#Electronic Highway Sign');
+    -unity-font-definition: initial;
+}
+
+.MenuContainer {
+    top: 50%;
+    align-items: center;
+}
+
+.PauseContainer {
+    flex: 1;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.PauseMenu {
+    flex: 1;
+    justify-content: space-between;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.PauseMenu.Active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.PauseMenu.Active .PauseContainer {
+    display: initial;
+}
+
+.MenuBackgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('project://database/Assets/Scripts/UI/Images/bg.jpg?fileID=2800000&guid=352d446321d29e346b6f5cd355ebcaa9&type=3#bg');
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(210, 210, 210, 0.7);
+    border-width: 0;
+    font-size: 64px;
+    margin-bottom: 10px;
+    transition: color 0.35s ease-in-out;
+}
+
+.button:hover {
+    color: rgba(210, 210, 210, 0.5);
+}
+
+.FPS {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px;
+    font-size: 16px;
+    color: rgb(209, 209, 209);
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    height: 160px;
+    width: 100%;
+    padding: 0 24px;
+    font-size: 48px;
+    align-items: center;
+    border-bottom-width: 3px;
+    border-bottom-color: rgb(112, 105, 105);
+    background-color: black;
+    color: rgb(209, 209, 209);
+    translate: 0 -160px;
+    transition: translate 0.35s;
+}
+
+.Footer {
+    display: flex;
+    flex-direction: row;
+    height: 160px;
+    width: 100%;
+    padding: 0 24px;
+    font-size: 24px;
+    justify-content: flex-end;
+    align-items: center;
+    border-top-width: 3px;
+    border-top-color: rgb(112, 105, 105);
+    background-color: black;
+    color: rgb(209, 209, 209);
+    translate: 0 160px;
+    transition: translate 0.35s;
+}
+
+.PauseMenu.Active .Footer {
+    translate: 0 0;
+}
+
+.PauseMenu.Active .Header {
+    translate: 0 0;
+}
+
+.ResumeKey {
+    background-color: white;
+    color: black;
+    width: 48px;
+    height: 48px;
+    border-radius: 2px;
+    -unity-text-align: middle-center;
+    margin-right: 16px;
+}

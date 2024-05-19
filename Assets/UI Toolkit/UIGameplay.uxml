@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Styles.uss" />
+    <ui:Label text="999 FPS" name="FPS" class="FPS"/>
+    <ui:VisualElement class="PauseMenu">
+        <ui:VisualElement class="Header">
+            <ui:Label text="Pause" />
+        </ui:VisualElement>
+        <ui:VisualElement class="PauseContainer">
+            <ui:Button text="Main menu" name="MainMenu" class="button" />
+            <ui:Button text="Settings" name="Settings" class="button" />
+            <ui:Button text="Exit Game" name="ExitGame" class="button" />
+            <ui:Button text="Resume" name="Resume" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement class="Footer">
+            <ui:Label text="Esc" class="ResumeKey"/>
+            <ui:Label text="Resume"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

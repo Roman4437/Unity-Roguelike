@@ -1,13 +1,19 @@
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameState : MonoBehaviour
 {
-    [SerializeField] private GameObject _ui;
+    private VisualElement _pauseElement;
     
     private bool _isGamePaused;
 
     public static event Action OnGameStateChange;
+
+    private void Start()
+    {
+        _pauseElement = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>(className: "PauseMenu");
+    }
 
     private void OnEnable()
     {
@@ -30,8 +36,17 @@ public class GameState : MonoBehaviour
     private void UpdateState()
     {
         _isGamePaused = !_isGamePaused;
-        Time.timeScale = Convert.ToInt32(!_isGamePaused);
+
+        if (_isGamePaused)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
+        _pauseElement.ToggleInClassList("Active");
         OnGameStateChange.Invoke();
-        _ui.SetActive(!_ui.activeSelf);
     }
 }

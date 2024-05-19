@@ -1,9 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/UIStyles.uss?fileID=7433441132597879392&amp;guid=8d5fc820cf6dbbf4db0aa03ef979581e&amp;type=3#UIStyles" />
-    <ui:IMGUIContainer style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&apos;project://database/Assets/Scripts/UI/bg.jpg?fileID=2800000&amp;guid=352d446321d29e346b6f5cd355ebcaa9&amp;type=3#bg&apos;);" />
-    <ui:VisualElement name="VisualElement" style="top: 50%; justify-content: space-between; height: 225px;">
-        <ui:Button text="New Game" display-tooltip-when-elided="true" name="NewGame" class="button" />
-        <ui:Button text="Settings" display-tooltip-when-elided="true" name="Settings" class="button" />
-        <ui:Button text="Exit Game" display-tooltip-when-elided="true" name="ExitGame" enable-rich-text="false" class="button" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles.uss" />
+    <ui:IMGUIContainer class="MenuBackgroundImage" />
+    <ui:VisualElement name="VisualElement" class="MenuContainer">
+        <ui:Button text="New Game" name="NewGame" class="button" />
+        <ui:Button text="Settings" name="Settings" class="button" />
+        <ui:Button text="Exit Game" name="ExitGame" class="button" />
     </ui:VisualElement>
 </ui:UXML>
