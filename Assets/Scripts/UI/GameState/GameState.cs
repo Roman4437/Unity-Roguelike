@@ -4,17 +4,10 @@ using UnityEngine.UIElements;
 
 public class GameState : MonoBehaviour
 {
-    private VisualElement _pauseElement;
-    
     private bool _isGamePaused;
 
     public static event Action OnGameStateChange;
-
-    private void Start()
-    {
-        _pauseElement = GetComponent<UIDocument>().rootVisualElement.Q<VisualElement>(className: "PauseMenu");
-    }
-
+    
     private void OnEnable()
     {
         Pause.OnResumeButtonClick += UpdateState;
@@ -45,8 +38,7 @@ public class GameState : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-
-        _pauseElement.ToggleInClassList("Active");
+        
         OnGameStateChange.Invoke();
     }
 }

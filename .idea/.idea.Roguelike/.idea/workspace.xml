@@ -10,16 +10,11 @@
     <list default="true" id="75207102-d697-44ea-a650-1189183f3cc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Roguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Roguelike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/FPS/FPS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/FPS/FPS.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameState/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameState/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameState/Pause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameState/Pause.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/FPS.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/FPS.uxml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/MainMenu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Toolkit/MainMenu.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/Pause.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/Pause.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/UIStyles.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/UIStyles.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/Styles.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Toolkit/Styles.uss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/UIGameplay.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Toolkit/UIGameplay.uxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +183,7 @@
       <workItem from="1716067062052" duration="5875000" />
       <workItem from="1716111132471" duration="1208000" />
       <workItem from="1716112671647" duration="205000" />
-      <workItem from="1716126567999" duration="1872000" />
+      <workItem from="1716126567999" duration="8925000" />
     </task>
     <servers />
   </component>

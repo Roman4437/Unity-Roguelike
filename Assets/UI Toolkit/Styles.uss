@@ -3,12 +3,12 @@
     -unity-font-definition: initial;
 }
 
-.MenuContainer {
+.menu-container {
     top: 50%;
     align-items: center;
 }
 
-.PauseContainer {
+.pause-container {
     flex: 1;
     height: 100%;
     display: none;
@@ -16,21 +16,21 @@
     justify-content: center;
 }
 
-.PauseMenu {
+.pause-menu {
     flex: 1;
     justify-content: space-between;
     transition: background-color 0.35s ease-in-out;
 }
 
-.PauseMenu.Active {
+.pause-menu.pause-menu-active {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.PauseMenu.Active .PauseContainer {
+.pause-menu.pause-menu-active .pause-container {
     display: initial;
 }
 
-.MenuBackgroundImage {
+.menu-background-image {
     position: absolute;
     left: 0;
     top: 0;
@@ -52,7 +52,7 @@
     color: rgba(210, 210, 210, 0.5);
 }
 
-.FPS {
+.fps {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,15 +61,14 @@
     color: rgb(209, 209, 209);
 }
 
-.Header {
-    display: flex;
+.header {
     flex-direction: row;
     height: 160px;
     width: 100%;
     padding: 0 24px;
     font-size: 48px;
     align-items: center;
-    border-bottom-width: 3px;
+    border-bottom-width: 2px;
     border-bottom-color: rgb(112, 105, 105);
     background-color: black;
     color: rgb(209, 209, 209);
@@ -77,7 +76,7 @@
     transition: translate 0.35s;
 }
 
-.Footer {
+.footer {
     display: flex;
     flex-direction: row;
     height: 160px;
@@ -86,7 +85,7 @@
     font-size: 24px;
     justify-content: flex-end;
     align-items: center;
-    border-top-width: 3px;
+    border-top-width: 2px;
     border-top-color: rgb(112, 105, 105);
     background-color: black;
     color: rgb(209, 209, 209);
@@ -94,20 +93,35 @@
     transition: translate 0.35s;
 }
 
-.PauseMenu.Active .Footer {
+.pause-menu.pause-menu-active .footer {
     translate: 0 0;
 }
 
-.PauseMenu.Active .Header {
+.pause-menu.pause-menu-active .header {
     translate: 0 0;
 }
 
-.ResumeKey {
+.resume-key {
     background-color: white;
     color: black;
     width: 48px;
     height: 48px;
+    font-size: 16px;
     border-radius: 2px;
     -unity-text-align: middle-center;
     margin-right: 16px;
+}
+
+.settings-menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.settings-menu.settings-menu-open {
+    display: initial;
 }

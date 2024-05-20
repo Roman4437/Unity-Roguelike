@@ -1,9 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Styles.uss" />
-    <ui:IMGUIContainer class="MenuBackgroundImage" />
-    <ui:VisualElement name="VisualElement" class="MenuContainer">
+    <ui:IMGUIContainer class="menu-background-image" />
+    <ui:VisualElement name="MenuContainer" class="menu-container">
         <ui:Button text="New Game" name="NewGame" class="button" />
         <ui:Button text="Settings" name="Settings" class="button" />
         <ui:Button text="Exit Game" name="ExitGame" class="button" />
+    </ui:VisualElement>
+    <ui:VisualElement class="settings-menu">
+        <ui:Label text="Label"/>
     </ui:VisualElement>
 </ui:UXML>

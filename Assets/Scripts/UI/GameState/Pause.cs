@@ -5,6 +5,9 @@ using UnityEngine.UIElements;
 
 public class Pause : MonoBehaviour
 {
+   private VisualElement _root;
+   private VisualElement _pauseElement;
+   
    private Button _resume;
    private Button _exitGame;
    private Button _mainMenu;
@@ -13,13 +16,19 @@ public class Pause : MonoBehaviour
 
    private void OnEnable()
    {
-      _resume = GetComponent<UIDocument>().rootVisualElement.Q<Button>("Resume");
-      _exitGame = GetComponent<UIDocument>().rootVisualElement.Q<Button>("ExitGame");
-      _mainMenu = GetComponent<UIDocument>().rootVisualElement.Q<Button>("MainMenu");
+      _root = GetComponent<UIDocument>().rootVisualElement;
+      
+      _pauseElement = _root.Q<VisualElement>(className: "pause-menu");
+      
+      _resume = _root.Q<Button>("Resume");
+      _exitGame = _root.Q<Button>("ExitGame");
+      _mainMenu = _root.Q<Button>("MainMenu");
       
       _resume.clicked += ResumeGame;
       _exitGame.clicked += Quit;
       _mainMenu.clicked += ExitMainMenu;
+
+      GameState.OnGameStateChange += TogglePauseClass;
    }
 
    private void OnDisable()
@@ -27,6 +36,8 @@ public class Pause : MonoBehaviour
       _resume.clicked -= ResumeGame;
       _exitGame.clicked -= Quit;
       _mainMenu.clicked -= ExitMainMenu;
+      
+      GameState.OnGameStateChange -= TogglePauseClass;
    }
 
    private void ResumeGame()
@@ -43,5 +54,10 @@ public class Pause : MonoBehaviour
    {
       ResumeGame();
       Scenes.Instance.LoadMenu();
+   }
+
+   private void TogglePauseClass()
+   {
+      _pauseElement.ToggleInClassList("pause-menu-active");
    }
 }
